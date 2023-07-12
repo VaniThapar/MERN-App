@@ -126,7 +126,7 @@ const ProductScreen = () => {
                   {product.countInStock > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>Qty</Col>
+                        <Col>Availability</Col>
                         <Col>
                           <Form.Control
                             as="select"
@@ -153,7 +153,7 @@ const ProductScreen = () => {
                       disabled={product.countInStock === 0}
                       onClick={addToCartHandler}
                     >
-                      Add To Cart
+                      Contact Us
                     </Button>
                   </ListGroup.Item>
                 </ListGroup>
@@ -162,8 +162,8 @@ const ProductScreen = () => {
           </Row>
           <Row className="review">
             <Col md={6}>
-              <h2>Reviews</h2>
-              {product.reviews.length === 0 && <Message>No Reviews</Message>}
+              <h2>Comments</h2>
+              {product.reviews.length === 0 && <Message>No Comments</Message>}
               <ListGroup variant="flush">
                 {product.reviews.map((review) => (
                   <ListGroup.Item key={review._id}>
@@ -174,7 +174,7 @@ const ProductScreen = () => {
                   </ListGroup.Item>
                 ))}
                 <ListGroup.Item>
-                  <h2>Write a Customer Review</h2>
+                  <h2>Write a comment</h2>
 
                   {loadingProductReview && <Loader />}
 
@@ -216,7 +216,7 @@ const ProductScreen = () => {
                     </Form>
                   ) : (
                     <Message>
-                      Please <Link to="/login">sign in</Link> to write a review
+                      Please <Link to="/login">sign in</Link> to write a comment
                     </Message>
                   )}
                 </ListGroup.Item>

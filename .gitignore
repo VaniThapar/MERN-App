@@ -15,6 +15,7 @@ build
 .env
 .DS_Store
 .env.local
+user.js
 .env.development.local
 .env.test.local
 .env.production.local
