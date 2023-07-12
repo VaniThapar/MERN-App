@@ -2,8 +2,6 @@ import bcrypt from "bcryptjs";
 
 const users = [
   {
-    
-  {
     name: "John Doe",
     email: "john@gmail.com",
     password: bcrypt.hashSync("123456", 10),
